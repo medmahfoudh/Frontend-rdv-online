@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Quicksand&display=swap");
+
+* {
+  font-family: "Courgette", cursive;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text {
+  font-family: "Courgette", cursive;
+  font-size: 130px;
+  margin-bottom: 70px;
+  color:#008E9B;
+
+}
+.description{
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 80px;
+}
+
+.row {
+  margin: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.column {
+  width: 50%;
+  /* border: 1px solid; */
+  justify-content: center;
+  text-align: center;
+}
+
+.column .ris {
+  width: 55%;
+  margin-top: 80px;
+}
+
+.column img {
+  width: 80%;
+}
+
+/* .waves{
+    position: relative;
+    top: 52%;
+    left: 0;
+} */
+
+/* btn */
+.btn {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 32px;
+  
+}
+
+.btn-2 {
+  color: #000;
+  
+}
+
+.btn-2::after,
+.btn-2::before {
+  border: 3px solid #008E9B;
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+
+}
+
+.btn-2:hover::after {
+  transform: translate(-5px, -5px);
+  
+}
+
+.btn-2:hover::before {
+  transform: translate(5px, 5px);
+
+}
+
+
+
+/* Reponsivity */
+
+@media (max-width: 600px){
+  .row{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+  .column{
+    width: 100%;
+  }
+
+  .text{
+    font-size: 70px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+  }
+  .ris{
+    width: 75%;
+    margin-top: 36px;
+  }
+  .description{
+    margin-left: 1px;
+  }
+  .column .ris{
+    width: 80%; 
+    margin-top: 52px;
+  }
+
+  .btn-2:hover::after {
+    transform: translate(-5px, -5px);
+    
+  }
+}
+

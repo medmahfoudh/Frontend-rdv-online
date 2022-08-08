@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9d07be5f51.js" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    <mat-toolbar>
+        
+      <span class="titre" routerLink="/Accueil">Ris Rdv-Online</span>
+      <div class="connexion">
+        <button mat-raised-button class="button-connexion">
+          <mat-icon>login</mat-icon> connexion
+        </button>
+      </div>
+    </mat-toolbar>
+
+    <div class="row-top">
+        <div class="text">
+        <mat-icon routerLink="/Conseillers">keyboard_backspace</mat-icon> <h4>Vous Avez Choisi <span>Mohamed Ahmed </span></h4>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="column-cartes">
+        <div class="carte-conseiller" >
+          <div class="item-conseiller">
+            <div class="img-conseiller">
+              <img
+                src="https://pngimg.com/uploads/man/man_PNG6531.png"
+                alt=""
+              />
+            </div>
+            <div class="description-conseiller">
+              <div class="nom-conseiller">
+                <span>Sidi Mohamed Ahmed </span>
+              </div>
+              <div class="info-conseiller">
+                <span>Manager Financier / Directeur Adjoint</span>
+              </div>
+              <div class="adresse-conseiller">
+                <span>N Bureau....</span>
+              </div>
+              <!-- <div class="btn-rdv">
+                <button mat-raised-button color="primary" routerLink="/Id-Conseiller" >
+                  Prendre Rendez-Vous
+                </button>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="etapes">
+            <div class="progress-bar">
+            </div>
+            
+  
+  
+            <div class="calendrier">
+                <div class="etape-1">
+                    1. Etape 1 
+                </div>
+              <full-calendar [options]="calendarOptions"></full-calendar>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121378.92610552454!2d-15.883520435155049!3d18.067321131197055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe96526c16ece9bd%3A0x270005bd53c1e1f9!2z2YbZiNin2YPYtNmI2LfYjCDZhdmI2LHZitiq2KfZhtmK2Kc!5e0!3m2!1sar!2s!4v1659014293075!5m2!1sar!2s"
+          width="356"
+          height="676"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="map-tel">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121378.92610552454!2d-15.883520435155049!3d18.067321131197055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe96526c16ece9bd%3A0x270005bd53c1e1f9!2z2YbZiNin2YPYtNmI2LfYjCDZhdmI2LHZitiq2KfZhtmK2Kc!5e0!3m2!1sar!2s!4v1659014293075!5m2!1sar!2s"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=Nouackchott&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:260px;width:575px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:260px;width:575px;}</style></div></div> -->
+      </div>
+    </div>
+
+    <footer>
+      <mat-toolbar class="footer-bar">
+        <span>Ris</span>
+      </mat-toolbar>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+:root{
+    --accueil-color : #fefeff;
+    --bg-color : linear-gradient(to right bottom, #ece2e8, #ebe4ea, #ebe6eb, #ebe8ec, #ebeaec, #e6e6ea, #e0e2e9, #d9dee7, #c4d5e3, #accddb, #94c6ce, #80bebb);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

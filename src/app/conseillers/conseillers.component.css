@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Mochiy+Pop+One&family=Quicksand:wght@300;400&display=swap");
+
+body {
+  width: 100%;
+  background: #f1f1f1;
+  height: auto;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+mat-toolbar {
+  background-color: #008e9b;
+  color: #fefefe;
+
+  justify-content: space-between;
+}
+
+mat-toolbar .titre {
+  font-family: "Courgette", cursive;
+  cursor: pointer;
+}
+
+.connexion {
+  display: flex;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+.button-connexion {
+  background-color: #0eaab9;
+  color: #ffff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+}
+
+.row-top {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.row-top span {
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.icon-conseiller {
+  transform: scale(2);
+  color: #008e9b;
+}
+
+.option-agence{
+  margin-top: 10px;
+  width: 50%;
+  height: 10%;
+  /* justify-content: center; */
+}
+
+/* mat-form-field{
+  width: 90%;
+} */
+
+.column {
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+}
+
+.text {
+  width: 65%;
+}
+
+.text mat-card {
+  background-color: cornsilk;
+  text-align: center;
+}
+
+/* Les Cartes Des Conseillers */
+
+.row {
+  display: flex;
+  width: 95%;
+  margin: 10px;
+  column-gap: 40px;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.steps{
+  width: 65%;
+  height: auto;
+  margin-bottom: 56px;
+
+}
+.column-cartes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 60%;
+}
+
+.btn-retour-suivant{
+  display: flex;
+  justify-content: space-between;
+}
+
+.liste-conseiller{
+  width: 96%;
+  display: grid;
+  margin-bottom: 5px;
+  row-gap: 10px;
+  column-gap: 10px;
+  grid-template-columns: repeat(4 , 25%);
+  grid-template-rows: repeat(2 , auto);
+}
+
+.carte-conseiller {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  column-gap: 4px;
+  height: 60%;
+  background-color: #fefeff;
+  border-radius: 10px;
+  transition: 1s ease;
+  height: auto;
+  margin-bottom:5px ;
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(247,175,157,0.67); 
+  box-shadow: 2px 2px 2px 1px rgba(247,175,157,0.67);
+}
+.item-conseiller{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.carte-conseiller:hover {
+  -webkit-box-shadow: 0px 1px 8px 2px rgba(0, 142, 155, 0.6);
+  -moz-box-shadow: 0px 1px 8px 2px rgba(0, 142, 155, 0.6);
+  box-shadow: 0px 1px 8px 2px rgba(0, 142, 155, 0.6);
+}
+.img-conseiller {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 8px 2px rgba(70, 68, 68, 0.4);
+  -moz-box-shadow: 0px 1px 8px 2px rgba(70, 68, 68, 0.4);
+  box-shadow: 0px 1px 8px 2px rgba(70, 68, 68, 0.4);
+}
+
+.description-conseiller {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 10px;
+  row-gap: 20px;
+}
+
+.nom-conseiller {
+  display: flex;
+  height: 30%;
+  background-color: antiquewhite;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.info-conseiller {
+  display: flex;
+  height: 18%;
+  background-color: antiquewhite;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.adresse-conseiller {
+  display: flex;
+  height: 18%;
+  background-color: antiquewhite;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.btn-rdv {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-rdv-tel{
+  display: none;
+}
+
+.calendrier {
+  width: 95%;
+  margin: 10px 10px 10px 0;
+  height: 380px;
+  overflow: hidden;
+
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(247,175,157,0.67); 
+box-shadow: 2px 2px 2px 1px rgba(247,175,157,0.67);
+}
+
+/* Styles Formulaire  */
+
+.formulaire{
+  width: 95%;
+  height: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  display: flex;
+  column-gap: 15px;
+  flex-direction: column;
+}
+
+.ligne-form{
+  display: flex;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+input[type='text']{
+  width: 45%;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+  transition: .5s ease;
+  background-color: #F5F5F5;
+}
+
+input[type='text']:focus{
+  border-bottom:2px solid #008e9b;
+}
+
+input[type='email']{
+  width: 91.5%;
+  padding: 15px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+  transition: 1s ease;
+  background-color: #F5F5F5;
+}
+
+input[type='number']{
+  width: 91.5%;
+  padding: 15px;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+  transition: 1s ease;
+  background-color: #F5F5F5;
+}
+
+input[type='email']:focus{
+  border-bottom:2px solid #008e9b;
+}
+
+input[type='number']:focus{
+  border-bottom:2px solid #008e9b;
+}
+/* Fin Styles Formulaires  */
+
+.map {
+  width: 356px;
+  height: 676px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 8px 2px #4e4e4e;
+  -moz-box-shadow: 0px 1px 8px 2px #4e4e4e;
+  box-shadow: 0px 1px 8px 2px #4e4e4e;
+}
+
+.map-tel{
+  display: none;
+}
+
+.spinner{
+  padding: 15px;
+  margin: 10px;
+}
+
+/* Footer */
+
+
+footer{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footer-bar {
+  background: #2c3333;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  bottom: 0;
+}
+
+.footer-bar span {
+  text-align: center;
+  font-family: "Courgette", cursive;
+}
+
+/* Responsivity */
+
+@media (max-width: 600px) {
+  body{
+    margin: 0;
+  }
+  .row-top {
+    width: 95%;
+  }
+  .text{
+    width: 100%;
+  }
+
+  .liste-conseiller{
+    width: 95%;
+  }
+  .img-conseiller{
+    width: 60px;
+    height: 60px;
+  }
+
+  .liste-conseiller{
+    grid-template-columns: repeat(2 , 50%);
+    grid-template-rows: repeat(2 , auto);
+  }
+
+  .calendrier{
+    width: 100%;
+    margin: 10px 10px 10px 0;
+    height: 301px;
+  }
+
+  .formulaire{
+    width: 100%;
+  }
+  input[type='text']{
+    width: 50%;
+  }
+  input[type='email'],input[type='number']{
+    width: 100%;
+  }
+  .steps{
+    width: 100%;
+    margin-bottom: 160px;
+  }
+
+}

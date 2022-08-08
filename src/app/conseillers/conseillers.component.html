@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Bar -->
+    <mat-toolbar>
+      <span class="titre" routerLink="/Accueil">Ris Rdv-Online</span>
+      <div class="connexion">
+        <button mat-raised-button class="button-connexion">
+          <mat-icon>login</mat-icon> connexion
+        </button>
+      </div>
+    </mat-toolbar>
+    <!-- Fin Bar -->
+    <div class="row-top">
+      <div class="text">
+        <mat-card color = "primary">Suivez toutes les étapes pour prendre rendez-vous avec votre conseiller</mat-card>
+
+      </div>
+
+      <!-- <span>Choisissez L'Agence</span> -->
+    </div>
+    <div class="row">
+      <!-- Les Etapes  -->
+      <div class="steps">
+        <mat-stepper orientation="vertical">
+          <!-- Etape 1  -->
+          <mat-step>
+            <ng-template matStepLabel
+              >&Eacute;tape 1: Choisir L'agence</ng-template
+            >
+            <ng-template matStepContent>
+              <p>Choisir L'agence</p>
+              <div class="option-agence">
+                <mat-form-field appearance="fill">
+                  <mat-label>Agence</mat-label>
+                  <mat-select>
+                    <mat-option> Agence Centrale</mat-option>
+                    <mat-option> Agence Dar Naim</mat-option>
+                    <mat-option> Agence Ksar</mat-option>
+                    <mat-option> Agence Toujounine</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <button mat-flat-button matStepperNext color="primary">
+                Suivant
+              </button>
+            </ng-template>
+          </mat-step>
+          <!-- Fin Etape 1  -->
+          <!-- Etape 2 Conseillers  -->
+          <mat-step>
+            <ng-template matStepLabel
+              >&Eacute;tape 2: Choisir Votre Conseiller</ng-template
+            >
+            <ng-template matStepContent>
+              <p>Choisir Votre Conseiller</p>
+              <div class="liste-conseiller">
+                <div class="carte-conseiller">
+                  <div class="item-conseiller">
+                    <div class="img-conseiller">
+                      <img
+                        src="data:image/jpeg;base64,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"
+                        alt=""
+                      />
+                    </div>
+                    <div class="description-conseiller">
+                      <div class="nom-conseiller">
+                        <span>Sidi Mohamed Ahmed </span>
+                      </div>
+                      <!-- <div class="info-conseiller">
+                        <span>Manager Financier / Directeur Adjoint</span>
+                      </div>
+                      <div class="adresse-conseiller">
+                        <span>N Bureau....</span>
+                      </div> -->
+                      <div class="btn-rdv">
+                        <button mat-flat-button matStepperNext color="primary">
+                          Prendre Rdv
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="btn-rdv-tel">
+                    <button mat-raised-button color="primary">
+                      Prendre Rendez-Vous
+                    </button>
+                  </div>
+                </div>
+
+                <div class="carte-conseiller">
+                  <div class="item-conseiller">
+                    <div class="img-conseiller">
+                      <img
+                        src="data:image/jpeg;base64,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"
+                        alt=""
+                      />
+                    </div>
+                    <div class="description-conseiller">
+                      <div class="nom-conseiller">
+                        <span>Sidi Mohamed Ahmed </span>
+                      </div>
+                      <!-- <div class="info-conseiller">
+                        <span>Manager Financier / Directeur Adjoint</span>
+                      </div>
+                      <div class="adresse-conseiller">
+                        <span>N Bureau....</span>
+                      </div> -->
+                      <div class="btn-rdv">
+                        <button mat-flat-button matStepperNext color="primary">
+                          Prendre Rdv
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="btn-rdv-tel">
+                    <button mat-raised-button color="primary">
+                      Prendre Rendez-Vous
+                    </button>
+                  </div>
+                </div>
+
+                <div class="carte-conseiller">
+                  <div class="item-conseiller">
+                    <div class="img-conseiller">
+                      <img
+                        src="data:image/jpeg;base64,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"
+                        alt=""
+                      />
+                    </div>
+                    <div class="description-conseiller">
+                      <div class="nom-conseiller">
+                        <span>Sidi Mohamed Ahmed </span>
+                      </div>
+                      <!-- <div class="info-conseiller">
+                        <span>Manager Financier / Directeur Adjoint</span>
+                      </div>
+                      <div class="adresse-conseiller">
+                        <span>N Bureau....</span>
+                      </div> -->
+                      <div class="btn-rdv">
+                        <button mat-flat-button matStepperNext color="primary">
+                          Prendre Rdv
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="btn-rdv-tel">
+                    <button mat-raised-button color="primary">
+                      Prendre Rendez-Vous
+                    </button>
+                  </div>
+                </div>
+
+                <div class="carte-conseiller">
+                  <div class="item-conseiller">
+                    <div class="img-conseiller">
+                      <img
+                        src="https://pngimg.com/uploads/man/man_PNG6531.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="description-conseiller">
+                      <div class="nom-conseiller">
+                        <span>Sidi Mohamed Ahmed </span>
+                      </div>
+                      <!-- <div class="info-conseiller">
+                        <span>Manager Financier / Directeur Adjoint</span>
+                      </div>
+                      <div class="adresse-conseiller">
+                        <span>N Bureau....</span>
+                      </div> -->
+                      <div class="btn-rdv">
+                        <button mat-flat-button matStepperNext color="primary">
+                          Prendre Rdv
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="btn-rdv-tel">
+                    <button mat-raised-button color="primary">
+                      Prendre Rendez-Vous
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-retour-suivant">
+                <button mat-flat-button matStepperPrevious color="warn">
+                  Retour
+                </button>
+              </div>
+            </ng-template>
+          </mat-step>
+          <!-- Fin Etape 2 -->
+          <!-- Etape 3 -->
+          <mat-step>
+            <ng-template matStepLabel>&Eacute;tape 3: Date Rdv</ng-template>
+            <p>Choisir La Date de Rdv</p>
+            <div class="calendrier">
+              <full-calendar [options]="calendarOptions"></full-calendar>
+            </div>
+            <div class="btn-retour-suivant">
+              <button mat-flat-button matStepperPrevious color="warn">
+                Retour
+              </button>
+              <button mat-flat-button matStepperNext color="primary">
+                Suivant
+              </button>
+            </div>
+          </mat-step>
+          <!-- Fin Etape 3 -->
+          <!-- Etape 4 -->
+          <mat-step>
+            <ng-template matStepLabel>&Eacute;tape 4: Informations</ng-template>
+            <p>Entrez vos informations</p>
+
+              <!-- Formulaire  -->
+              <div class="formulaire">
+                <form action="">
+                  <div class="ligne-form">
+                    <input type="text" name="nom" placeholder="Nom">
+                    <input type="text" name="prenom" placeholder="Prenom">
+                  </div>
+                  <div class="ligne-form">
+                    <input type="email" name="email" placeholder="Email">
+                  </div>
+                  <div class="ligne-form">
+                    <input type="number" name="tel" placeholder="Téléphone">
+                  </div>
+
+                </form>
+              </div>
+
+            
+            <!-- Fin Formulaire  -->
+
+            <div class="btn-retour-suivant">
+              <button mat-flat-button matStepperPrevious color="warn">
+                Retour
+              </button>
+              <button mat-flat-button matStepperNext color="primary">
+                Suivant
+              </button>
+            </div>
+          </mat-step>
+          <!-- Fin Etape 4 -->
+          <!-- Etape 5 Validation  -->
+          <mat-step>
+            <ng-template matStepLabel>Validation</ng-template>
+            <p>En cours de Validation</p>
+            <div class="spinner">
+              <mat-spinner></mat-spinner>
+            </div>
+     
+
+            <button mat-flat-button matStepperPrevious color="warn">
+              Retour
+            </button>
+          </mat-step>
+          <!-- Fin Etape 5 Validation  -->
+        </mat-stepper>
+      </div>
+      <!-- Fin Tous Les Etapes  -->
+
+      <!-- Les Maps  -->
+      <!-- <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121378.92610552454!2d-15.883520435155049!3d18.067321131197055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe96526c16ece9bd%3A0x270005bd53c1e1f9!2z2YbZiNin2YPYtNmI2LfYjCDZhdmI2LHZitiq2KfZhtmK2Kc!5e0!3m2!1sar!2s!4v1659014293075!5m2!1sar!2s"
+          width="356"
+          height="676"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div> -->
+      <!-- <div class="map-tel">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121378.92610552454!2d-15.883520435155049!3d18.067321131197055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe96526c16ece9bd%3A0x270005bd53c1e1f9!2z2YbZiNin2YPYtNmI2LfYjCDZhdmI2LHZitiq2KfZhtmK2Kc!5e0!3m2!1sar!2s!4v1659014293075!5m2!1sar!2s"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div> -->
+    </div>
+
+    <footer>
+      <mat-toolbar class="footer-bar">
+        <span>Ris</span>
+      </mat-toolbar>
+    </footer>
+  </body>
+</html>
