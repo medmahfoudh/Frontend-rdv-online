@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100vw ;
 }
 .text {
   font-family: "Courgette", cursive;
